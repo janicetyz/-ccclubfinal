@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -168,9 +174,9 @@ def get_df(all_result,thr) -> pd.DataFrame:
 
 
 def main():    
-    kw_list = ["三多偉力健關鍵營養素","原味太太", "寶可夢"] #kw_list數量一定得跟thr_list數量相同，不然會出錯
-    # kw_list = ["三多偉力健關鍵營養素"]
-    thr_list = ["680", "700", "1300"]
+    kw_list = ["三多偉力健綜合優蛋白","三多偉力健鉻營養素","三多偉力健女性營養素","三多偉力健LPN營養素","三多偉力健關鍵營養素","三多偉力健順暢營養素","三多偉力健均衡營養素",] #kw_list數量一定得跟thr_list數量相同，不然會出錯
+    
+    thr_list = ["725", "875", "590","590","590","675","535",]
 
     start_time = time.time()
     crawl_shopee(kw_list,thr_list)
